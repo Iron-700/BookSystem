@@ -1,0 +1,148 @@
+
+  
+.navbar li {
+    border: 1px solid #ccc;
+    padding: 8px 50px;
+    margin-bottom: 10px 20px;
+  }
+ 
+
+
+
+h1{
+    margin: 10px 413px;
+    padding-left: 20px 20px;
+    color: rgb(23, 237, 198);
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+li{
+    border: 2px solid black;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    margin: 2px 72px;
+    margin-top: 50px;
+    padding: 7px 12px;
+    border: 2px solid burlywood;
+    border-radius: 2px;
+    
+    
+
+}
+
+a{
+    color: white;
+    text-decoration: none;
+
+}
+    
+
+a:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+
+}
+.navbar li{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+
+}
+li img{
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+}
+.flex{
+    margin: 32px 10px;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.op{
+    display: flex;
+    justify-content: center;
+}
+h4{
+    color: darkseagreen;
+}
+.rows a{
+    color: darksalmon;
+    display: inline-block;
+    padding: 10px;
+    margin: -28px 103px; 
+}
+section ul li h3{
+    display: flex;
+    justify-content: center;
+    
+}
+section ul li button{
+    
+    margin: 2px 40px;
+    
+}
+section ul li button:hover{
+    
+    color: white;
+    background-color: black;
+    
+}
+h2{
+    color: rgb(250, 48, 250);
+    display: flex;
+    justify-content: center;
+    padding: 20px 40px;
+    margin: 20px 40px;
+}
+footer img{
+    width: 10%;
+    height: 15%;
+    display: inline-block;
+    justify-content:center;
+    padding: 1px 16px;
+    margin: 21px 21px;
+
+}
+footer{
+    padding: 39px 149px;
+    margin: 15px 286px;
+
+}
+footer h4{
+    
+    color: black;
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    
+    padding: 2px -52px;
+    margin: 23px 51px;
+
+}
+.footer img a:hover{
+    background-color: white;
+    color: black;
+}
+body::before{
+    background: url(lib1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    content: "";
+    /* top: 0;
+    left: 0;   */
+    z-index: -1;
+    height: 50%;
+    width: 100%; 
+    opacity: 0.89;
+    
+}
+button{
+    cursor: pointer;
+}

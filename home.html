@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Rental and Exchange</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  .popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .popup h3 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+</style>
+
+</head>
+<body>
+  <header>
+    
+  
+    <h1>Book Rental and Exchange</h1>
+
+    <nav class="navigation">
+        <div class="navbar">
+            <ul>
+                <li><a href="#" target="_self">Home</a></li>
+                <li><a href="#">Rent</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Available Books</h2>
+      <ul id="book-list">
+        <li>
+          <img src="Mad.jpeg" alt="Book 1">
+          <h3>MAD</h3>
+          
+          <button>Available for Rent</button>
+        </li>
+        <li>
+          <img src="kaboom.jpeg" alt="Book 2">
+          <h3>Kaboom Kid</h3>
+          
+          <button>Available for Rent</button>
+        </li>
+        <li>
+          <img src="Half.jpeg" alt="Book 3">
+          <h3>The Half Moon</h3>
+          
+          <button>Available for Rent</button>
+        </li>
+        <li>
+          <img src="Web.jpeg" alt="Book 4">
+          <h3>Web Design</h3>
+          
+          <button>Available for Rent</button>
+        </li>
+        <li>
+          <img src="Yellow.jpeg" alt="Book 5">
+          <h3>Yellow Face</h3>
+          
+          <button>Available for Rent</button>
+        </li>
+        <li>
+          <img src="Harry.jpeg" alt="Book 6">
+          <h3>Harry Potter</h3>
+          
+          <button>Available for Rent</button>
+        </li>
+        <li>
+          <img src="op.jpeg" alt="Book 7">
+          <h3>OnePiece</h3>
+          
+          <button>Available for Rent</button>
+        </li>
+        <li>
+          <img src="Sherlock.jpeg" alt="Book 8">
+          <h3>Sherlock Holmes</h3>
+          
+          <button>Available for Rent</button>
+        </li>
+        <li>
+          <img src="python.jpeg" alt="Book 9">
+          <h3>Python</h3>
+          
+          <button>Available for Rent</button>
+        </li>
+        <li>
+          <img src="ghost .jpeg" alt="Book 10">
+          <h3>Ghost Rider</h3>
+          
+          <button>Available for Rent</button>
+        </li>
+        <li>
+          <img src="think.jpeg" alt="Book 11">
+          <h3>Think And Grow</h3>
+          
+          <button>Available for Rent</button>
+        </li>
+        <li>
+          <img src="Bat.jpeg" alt="Book 12">
+          <h3>BatMan</h3>
+          
+          <button>Available for Rent</button>
+        </li>
+        
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <h4>OUR SOCIAL MEDIA HANDLES</h4>
+    <a href="https://www.instagram.com/" target="_blank"><img src="insta1.png" alt="InstaGram"></a>
+    <a href="https://www.facebook.com/" target="_blank"><img src="face.png" alt="FaceBook"></a>
+    <a href="https://in.linkedin.com/" target="_blank"><img src="linked.png" alt="LinkedIn"></a>
+    <a href="https://www.youtube.com/" target="_blank"><img src="you.png" alt="YouTube"></a>
+    <a href="https://twitter.com/" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+    <a href="https://telegram.org/" target="_blank"><img src="telegram1.png" alt="Telegram"></a>
+  </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $("button").click(function() {
+      var bookName = $(this).siblings("h3").text();
+      
+      $("<div>")
+        .addClass("overlay")
+        .appendTo("body")
+        .html(`<div class="popup"><h3>You have rented ${bookName}</h3></div>`)
+        .fadeIn(500);
+      
+      setTimeout(function() {
+        $(".popup").fadeOut(500, function() {
+          $(".overlay").fadeOut(500, function() {
+            $(this).remove();
+            movieElement.find("this").css("color", "");
+          });
+        });
+      }, 3000);
+    });
+  });
+  $(document).ready(function() {
+  $("button").click(function() {
+    var bookName = $(this).siblings("h3").text();
+    console.log("You have rented", bookName);
+    $(this).text("Rented").attr("disabled", true);
+  });
+});
+
+</script>
+
+  
+</body>
+</html>
